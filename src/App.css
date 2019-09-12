@@ -1,33 +1,105 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Bevan&display=swap');
+
+body {
+  background: url('https://www.reallusion.com/ContentStore/CTA/Pack/G3-Animation-Suite-Weather-Maker/images/sunny.jpg');
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Bevan', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+.main {
+  height: 95vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column nowrap;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  font-family: 'Bevan', cursive;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  background: #4aadc5;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.2s ease 0s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  outline: none;
+  cursor: pointer;
+  background:  rgb(162, 0, 255);
+  letter-spacing: 2px;
+  transition: all 0.2s; /* to all shmainei ola auta pou exw orisei na allazoun otan ginetai to hover dhladh to background kai to letter-spacing. to 0.2 second einai stadiaka se poso xrono apotan
+  kanw hover tha oloklhrw8ei h allagh */
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+button::-moz-focus-inner { /*etsi afairw to border pou emfanizotan mesa sto koubi otan to pataw gia ton mozilla. ston chrome den emfanizotan kati */
+  border: none;
+}
+
+
+input {
+  outline: none;
+  font-size: 20px;
+  font-family: 'Bevan', cursive;
+  height: 30px;
+  width: 250px;;
+  color: black;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid rgb(162, 0, 255);
+  margin-right: 20px;
+}
+
+.weather-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.weather-error {
+  font-size:25px;
+  text-align: center;
+  color: rgb(162, 0, 255);
+}
+
+::placeholder {
+  font-size: 25px;
+}
+
+@media (max-width: 890px) {
+  body, .title-container, button, ::placeholder {
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 20px;
+  }
+  button {
+    width: 7em;
+  }
+  button:hover {
+    background: #572d55;
+    letter-spacing: 0.5px;
   }
 }
