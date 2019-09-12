@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Titles from './components/titles';
+import AppTitle from './components/apptitle';
 import Form from './components/form';
 import Weather from './components/weather';
 
@@ -26,7 +26,6 @@ fetchTheWeather = async (e) => { // to async/await xrhsimopoieitai otan 8eloume 
 // h ektelesh mias async/await sunarthshs den stamataei thn ektelesh tou programmatos mas. parallhla ektelountai alla kommatia kwdika ektos ths fetchTheWeather
 
   const city = e.target.elements.city.value;
-
   const country = e.target.elements.country.value;
 
   e.preventDefault(); // an de to balw tote otan pataw to check weather/submit button h selida mou kanei full refresh.
@@ -73,7 +72,7 @@ fetchTheWeather = async (e) => { // to async/await xrhsimopoieitai otan 8eloume 
     return(
          <div className="main">
           <div className="title">
-            <Titles />
+            <AppTitle />
           </div>
           <div className="form">
             <Form fetchTheWeather={this.fetchTheWeather}/>
