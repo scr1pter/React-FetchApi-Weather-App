@@ -72,7 +72,7 @@ fetchTheWeather = async (e) => { // to async/await xrhsimopoieitai otan 8eloume 
     return(
          <div className="main">
           <div className="title">
-            <AppTitle />
+            <Apptitle />
           </div>
           <div className="form">
             <Form fetchTheWeather={this.fetchTheWeather}/>
