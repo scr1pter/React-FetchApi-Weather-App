@@ -34,7 +34,7 @@ fetchTheWeather = async (e) => { // to async/await xrhsimopoieitai otan 8eloume 
 // edw dhmiourgw mia metablhth pou pairnei ws timh oti epistrefei h fetch apto url pou xrhsimopoihsa sthn ousia ka8e fora pou grafw mia polh kai mia xwra kai pataw submit tote kaleitai h getWeather
 // kai pernaw san sta8era city thn polh pou egrapsa kai san sta8era country thn xwra pou egrapsa opote me to apikey pou phra apto openweathermap, h fetch epistrefei oles tis plhrofories
 // gia tis kairikes sun8hkes sthn sugkekrimenh topo8esia. An paw sto url http://api.openweathermap.org/data/2.5/weather?q=thessaloniki,gr&appid=036a4d4d19ef25b8d3ce1ea3e534a26a tote blepw ton pinaka antikeimenwn pou epistrefei to fetch.
-  const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${ApiKey}`);
+  const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${ApiKey}`);
   
   const response = await api_call.json(); // edw prepei na metatrepsw tis plhrofories pou phra apthn fetch
   // se ena antikeimeno pou borei na diabasei kai na katalabei h javascript, dhladh se json format
